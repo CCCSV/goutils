@@ -1,8 +1,5 @@
-goutils
-=======
+***This repo is no longer maintained
 
 Utility library for go
 
-Currently contains:
-	-Modified json marshaler, to enable lowercase json fields
-	-Revel result type for lowercase json fields
+Currently contains: -Modified json marshaler, to enable lowercase json fields
