@@ -332,7 +332,7 @@ func (e *encodeState) reflectValueQuoted(v reflect.Value, quoted bool, lowerFirs
 		if math.IsInf(f, 0) || math.IsNaN(f) {
 			e.error(&UnsupportedValueError{v, strconv.FormatFloat(f, 'g', -1, v.Type().Bits())})
 		}
-		b := strconv.AppendFloat(e.scratch[:0], f, 'g', -1, v.Type().Bits())
+		b := strconv.AppendFloat(e.scratch[:0], f, 'f', -1, v.Type().Bits())
 		if quoted {
 			writeString(e, string(b))
 		} else {
